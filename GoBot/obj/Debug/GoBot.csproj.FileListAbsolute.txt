@@ -1,0 +1,9 @@
+C:\Users\andre\source\repos\GoBot\GoBot\bin\Debug\GoBot.exe.config
+C:\Users\andre\source\repos\GoBot\GoBot\bin\Debug\GoBot.exe
+C:\Users\andre\source\repos\GoBot\GoBot\bin\Debug\GoBot.pdb
+C:\Users\andre\source\repos\GoBot\GoBot\obj\Debug\GoBot.csprojAssemblyReference.cache
+C:\Users\andre\source\repos\GoBot\GoBot\obj\Debug\GoBot.Properties.Resources.resources
+C:\Users\andre\source\repos\GoBot\GoBot\obj\Debug\GoBot.csproj.GenerateResource.cache
+C:\Users\andre\source\repos\GoBot\GoBot\obj\Debug\GoBot.csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\GoBot\GoBot\obj\Debug\GoBot.exe
+C:\Users\andre\source\repos\GoBot\GoBot\obj\Debug\GoBot.pdb
