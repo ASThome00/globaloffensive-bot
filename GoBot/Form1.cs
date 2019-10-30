@@ -16,8 +16,6 @@ namespace GoBot
         public Form1()//initialization of the visible form
         {
             InitializeComponent();//make forms visible
-            for (int i = 0; i < 10000; i++)
-                DoMouseClick();
         }
 
         /**
