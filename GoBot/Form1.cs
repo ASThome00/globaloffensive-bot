@@ -13,12 +13,17 @@ namespace GoBot
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1()//initialization of the visible form
         {
-            InitializeComponent();
+            InitializeComponent();//make forms visible
+            for (int i = 0; i < 10000; i++)
+                DoMouseClick();
         }
 
-        public void Send(ScanCodeShort a)
+        /**
+         * Send: Sends a keyboard input to computer
+         */
+        public void Send(ScanCodeShort a) //use the ScanShortCode from Keys.cs to pass keys to the input of the machine
         {
             INPUT[] Inputs = new INPUT[1];
             INPUT Input = new INPUT();
@@ -28,6 +33,43 @@ namespace GoBot
             Inputs[0] = Input;
             SendInput(1, Inputs, INPUT.Size);
         }
+
+        /**
+         * mouse_event: sends input to the mouse 
+         */
+        [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        public static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint cButtons, uint dwExtraInfo);
+        //Mouse actions
+        private const int MOUSEEVENTF_LEFTDOWN = 0x02;
+        private const int MOUSEEVENTF_LEFTUP = 0x04;
+        private const int MOUSEEVENTF_RIGHTDOWN = 0x08;
+        private const int MOUSEEVENTF_RIGHTUP = 0x10;
+
+        public void DoMouseClick() //performs left click
+        {
+            //Call the imported function with the cursor's current position
+            uint X = (uint)Cursor.Position.X;
+            uint Y = (uint)Cursor.Position.Y;
+            mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, X, Y, 0, 0);
+        }
+
+        public void DoRightMouseClick() //performs left click
+        {
+            //Call the imported function with the cursor's current position
+            uint X = (uint)Cursor.Position.X; //specifies the position of the click as the current position of the mouse
+            uint Y = (uint)Cursor.Position.Y;
+            mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, X, Y, 0, 0);
+        }
+
+
+
+
+
+
+
+
+
+
 
 
 
