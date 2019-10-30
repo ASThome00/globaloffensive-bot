@@ -3,6 +3,7 @@ An attempt to create a bot that can play CS:GO on Dust II in competitive mode
 
 To-Do:
 - [ ] Add control input frameworks
+  - Keyboard and mouse click frameworks complete, just mouse move left
 - [ ] Add detection of game exe
 - [ ] Create logic of timers and gamemode "awareness"
 - [ ] Create movement methods
